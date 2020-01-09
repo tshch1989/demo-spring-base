@@ -1,4 +1,4 @@
-package com.example.demo.demo.advanced;
+package com.example.demo.demo.advanced.beanFactoryPostProcessor;
 
 import com.example.demo.demo.advanced.auxiliary.My1BeanFactoryPostProcessor;
 import com.example.demo.manual.Say;
