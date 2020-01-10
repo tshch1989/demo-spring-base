@@ -21,6 +21,10 @@ public class Say {
     @Value("${my_name2}")
     private String name2;
 
+    public Say(){
+        System.out.println("Say 构造...");
+    }
+
     public void say(){
         mySay.say();
         mySay2.say();
