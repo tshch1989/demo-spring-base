@@ -27,6 +27,7 @@ public class BeanNameAutoProxyCreatorDemo {
                 return proxyCreator;
             }
         });
+        context.registerShutdownHook();
         context.refresh();
 
         Hello hello = context.getBean(Hello.class);

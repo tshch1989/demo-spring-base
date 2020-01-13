@@ -10,10 +10,12 @@ public class SmartLifecycleDemo {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
         context.registerBean(LifecycleHello.class);
         context.registerBean(MySmartLifecycle.class);
+        context.registerShutdownHook();
         context.refresh();
 
         LifecycleHello lifecycleHello = context.getBean(LifecycleHello.class);
         lifecycleHello.say();
+
     }
 
 }

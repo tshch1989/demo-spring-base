@@ -18,6 +18,7 @@ public class BeanFactoryPostProcessorDemo {
         context.scan("com.example.demo.mybean");
         context.registerBean(Say.class);
         context.registerBean(My1BeanFactoryPostProcessor.class);
+        context.registerShutdownHook();
         context.refresh();
         Say say = context.getBean(Say.class);
         say.sayHello();

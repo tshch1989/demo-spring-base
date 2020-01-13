@@ -23,6 +23,7 @@ public class PropertyResourceConfigurerDemo {
                 PropertySourcesPlaceholderConfigurer.class,
                 ()->{return placeholderConfigurer;});
 
+        context.registerShutdownHook();
         context.refresh();
 
         Say say = context.getBean(Say.class);

@@ -10,6 +10,7 @@ public class InstantiationAwareBeanPostProcessorDemo {
         context.scan("com.example.demo.mybean");
         context.registerBean(Say.class);
         context.registerBean(My1InstantiationAwareBeanPostProcessor.class);
+        context.registerShutdownHook();
         context.refresh();
 
         Say bean = context.getBean(Say.class);

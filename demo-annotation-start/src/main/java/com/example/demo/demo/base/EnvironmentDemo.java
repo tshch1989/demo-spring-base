@@ -49,6 +49,7 @@ public class EnvironmentDemo {
         context.setEnvironment(environment);
         context.scan("com.example.demo.mybean");
         context.registerBean(Say.class);
+        context.registerShutdownHook();
         context.refresh();
         Say say = context.getBean(Say.class);
         say.sayHello();

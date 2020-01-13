@@ -23,6 +23,7 @@ public class ScopeDemo {
             }
         });
         context.registerBean(ScopeHello.class);
+        context.registerShutdownHook();
         context.refresh();
 
         //直接读取，对象一致

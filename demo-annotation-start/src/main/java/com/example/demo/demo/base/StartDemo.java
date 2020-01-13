@@ -12,6 +12,7 @@ public class StartDemo {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
         context.scan("com.example.demo.mybean");//包扫描方式注册bean
         context.registerBean(Say.class);
+        context.registerShutdownHook();
         context.refresh();
         Say say = (Say)context.getBean("say");
         say.say();

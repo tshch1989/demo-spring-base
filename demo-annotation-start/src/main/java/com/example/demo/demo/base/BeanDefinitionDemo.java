@@ -27,6 +27,7 @@ public class BeanDefinitionDemo {
                 .setAutowireMode(AUTOWIRE_BY_TYPE)
                 .getBeanDefinition();
         context.registerBeanDefinition("say", beanDefinition);
+        context.registerShutdownHook();
         context.refresh();
         Say say = (Say)context.getBean("say");
         say.say();
@@ -41,6 +42,7 @@ public class BeanDefinitionDemo {
                 .addPropertyReference("mySay2", "mySay2")
                 .getBeanDefinition();
         context.registerBeanDefinition("say", beanDefinition);
+        context.registerShutdownHook();
         context.refresh();
         Say say = (Say)context.getBean("say");
         say.say();
@@ -56,6 +58,7 @@ public class BeanDefinitionDemo {
                 .addPropertyValue("name2", "name2")
                 .getBeanDefinition();
         context.registerBeanDefinition("say", beanDefinition);
+        context.registerShutdownHook();
         context.refresh();
         Say say = (Say)context.getBean("say");
         say.sayHello();
