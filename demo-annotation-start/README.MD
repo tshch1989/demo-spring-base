@@ -3,3 +3,4 @@
 * beanPostProcessor处理流程演示
 * scope功能处理演示
 * aop基础构件演示
+* Lifecycle外部生命周期管理演示
