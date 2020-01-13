@@ -4,7 +4,7 @@ import com.example.demo.demo.advanced.auxiliary.My1BeanPostProcessor;
 import com.example.demo.manual.Say;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class BeanPOstProcessorDemo {
+public class BeanPostProcessorDemo {
 
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
